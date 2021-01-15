@@ -312,10 +312,12 @@ img{
   box-shadow: 0 4px 25px rgba(14,36,49,.15);
   border-radius: .5rem;
   overflow: hidden;
+  height: 200px;
 }
 .work__img img{
   transition: 1s;
   cursor: pointer;
+  object-fit: cover;
 }
 .work__img img:hover{
   transform: scale(1.1);
