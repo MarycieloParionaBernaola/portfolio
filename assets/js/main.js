@@ -58,4 +58,29 @@ sr.reveal('.contact__input',{interval: 200});
 
 
 
+var a = document.querySelectorAll("a:not(.cerrar)");
+if(a && a.length > 0){ //Validación 
+  /*
+  Una vez que tenemos todo nuestro Array del querySelector, procedemos a iterarlo.
+  Le asignamos el evento onclick a cada elemento iterado.
+  Dentro del evento verificamos la existencia de la clase; seleccion, en dado caso de NO encontrarla, entonces le agregamos esa clase mediante la propiedad className. Ahora como método alternativo (y por si algo ocurriera) si ya tiene la clase selección, entonces la reemplazamos por nada,vacio, etc. Y al final ejecutamos la funcion llamada z.
+  */ 
+  a.forEach((aa)=>{ aa.onclick = ()=> ( aa.className =  aa.className.search(/seleccion/g) <0 ? aa.className+" seleccion" : aa.className.replace(/seleccion/g,"") )&&z() });
+}
+//Esta funcion z
+function z(){
+  // Buscamos el elemento a con la clase .cerrar
+  var x = document.querySelector("a.cerrar");
+  if(x){ //Validación
+    //Ahora buscamos todos los elementos que tengan la clase; seleccion. 
+    var b = document.querySelectorAll(".seleccion");
+    /*Le agregamos el evento click e iteramos los array, al final vamos a reemplazar la clase seleccion por un vacio.*/
+    x.onclick = () => (
+      b.forEach((aa) =>{
+        aa.className = aa.className.replace(/seleccion/g,"")
+      })
+    );
+  }
 
+  
+}

@@ -450,3 +450,45 @@ img{
     right: 10%;
   }
 }
+
+
+
+
+
+
+div > a.cerrar{
+  cursor:pointer;
+}
+.modal-contenido{
+  background-color: white;
+  padding: 1rem 2rem;
+  margin: 20% auto;
+  position: relative;
+  width:300px;
+}
+.modal{
+  background-color: rgba(0,0,0,.8);
+  position:fixed;
+  z-index: 2;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  opacity:0;
+  pointer-events:none;
+  transition: all 1s;
+}
+
+.modal-contenido img {
+  margin: auto;
+}
+
+.demo {
+  color: #4070F4;
+  font-weight: bold;
+}
+#travelinModal:target, #rickAndMortyModal:target, #secureTalkModal:target{
+  opacity:1;
+  pointer-events:auto;
+}
+
