@@ -483,7 +483,8 @@ div > a.cerrar{
   color: #4070F4;
   font-weight: bold;
 }
-#travelinModal:target, #rickAndMortyModal:target, #secureTalkModal:target{
+
+#bqRestaurantModal:target, #travelinModal:target, #secureTalkModal:target{
   opacity:1;
   pointer-events:auto;
 }
